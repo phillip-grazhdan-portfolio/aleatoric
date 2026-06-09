@@ -105,14 +105,14 @@ def build():
         for chord in chords:
             samplerate = 48000
             t = np.linspace(0.0, (60/tempo) * 4, int(samplerate * (60/tempo) * 4))
-            chord_data = np.sum([np.sin(2.0 * np.pi * k * t) for k in chord], axis=0)
+            chord_data = np.sum([-2/np.pi * np.sum([(pow(-1, k)) / k * np.sin(2 * np.pi * k * note * t) for k in range(1, 100)], axis=0) for note in chord], axis=0)
             chord_list.append(chord_data)
 
         combined_chord = np.concatenate(chord_list)
 
         # melody section needs to be implemented
 
-    wav.write("chord.wav", samplerate, combined_chord.astype(np.int16))
+    wav.write("ALEATORIC.wav", samplerate, combined_chord.astype(np.int16))
 
     sd.play(combined_chord, samplerate)
     sd.wait()
