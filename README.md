@@ -20,8 +20,7 @@ The way it works is:
   - The tempo is calculated via `60/BPM`, and multiplied by 4 to indicate 4 beats per measure
   - Each note in a chord is calculated as a sawtooth via it's Fourier series, and each calculated note is summed together to form the triads
   - Each one measure chord playback is then appended to the full chord list.
-
-~~The melody section is not yet implemented, but will work similarly. Need to figure it out.~~
+- The melody is generated the same way, except there's only one dimension to concatenate, so no extra summing.
 
 I'd say with how much longer this program took me to make, it is very nice to have the flexibility of Python's syntax
 and how fun it is to mess it up sometimes (almost had my speakers blown out a few times).
