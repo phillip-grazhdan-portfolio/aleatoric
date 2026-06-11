@@ -114,7 +114,7 @@ def build():
 
         prog = chord_to_structure[passage]
 
-        print (chord_to_structure) # dev
+        # print (chord_to_structure) # dev
 
         chords, melody = parse(prog, key)
 

@@ -22,5 +22,7 @@ The way it works is:
   - Each one measure chord playback is then appended to the full chord list.
 - The melody is generated the same way, except there's only one dimension to concatenate, so no extra summing.
 
+My design is extremely flawed, and it's making generating a melody almost impossible. I don't think I can go back for this one. Otherwise, everything else specified works fine.
+
 I'd say with how much longer this program took me to make, it is very nice to have the flexibility of Python's syntax
 and how fun it is to mess it up sometimes (almost had my speakers blown out a few times).
